@@ -19,11 +19,12 @@ enum HttpError: Error {
     case badURL, badResponse, errorDecodingData, invalidURL
 }
 
-class HttpClient {
-    private init() { }
-    
-    static let shared = HttpClient()
-    
+protocol HTTPClientProtocol {
+  func fetch<T: Codable>(url: URL) async throws -> [T]
+}
+
+class HttpClient: HTTPClientProtocol {
+  
     func fetch<T: Codable>(url: URL) async throws -> [T] {
         let (data, response) = try await URLSession.shared.data(from: url)
         

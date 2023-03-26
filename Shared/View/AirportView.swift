@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct AirportView: View{
-    @StateObject var list = NetworkManager()
+  
+  @StateObject var viewModel = AirportViewModel(httpClient: HttpClient())
     
     var body: some View{
       NavigationView {
         ZStack {
-          if list.isRefreshing {
+          if viewModel.isRefreshing {
             ProgressView()
           } else {
             List{
-              ForEach(list.datas, id: \.self){ item in
+              ForEach(viewModel.airports, id: \.self){ item in
                 NavigationLink(destination: AirportDetailsView(item: item)){
                   VStack(alignment: .leading) {
                       Text("**Airport Name**: \(item.airportName ?? "")")
@@ -35,7 +36,15 @@ struct AirportView: View{
           }
         }
       }
-      .onAppear(perform: list.fetchAirport)
+      .onAppear {
+          Task {
+              do {
+                try await viewModel.fetchAirport()
+              } catch {
+                  print("❌ Error: \(error)")
+              }
+          }
+      }
       .navigationBarHidden(true)
     }
 }

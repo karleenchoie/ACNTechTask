@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02C91AE29D04A7F0060605B /* AirportListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02C91AD29D04A7F0060605B /* AirportListViewModelTests.swift */; };
 		A0531CC529C449D000B39EB9 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0531CC429C449D000B39EB9 /* Tests_iOS.swift */; };
 		A0531CC729C449D000B39EB9 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0531CC629C449D000B39EB9 /* Tests_iOSLaunchTests.swift */; };
 		A0531CD129C449D000B39EB9 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0531CD029C449D000B39EB9 /* Tests_macOS.swift */; };
@@ -37,9 +38,9 @@
 		A0531D0529C474E700B39EB9 /* AirportDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0531D0329C474E700B39EB9 /* AirportDetailsView.swift */; };
 		A0CB4DC729D0310400634235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB4DC629D0310400634235 /* Constants.swift */; };
 		A0CB4DC929D0313100634235 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB4DC829D0313100634235 /* HttpClient.swift */; };
-		A0CF4ED929CD4EA900CA6488 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF4ED829CD4EA900CA6488 /* NetworkManager.swift */; };
-		A0CF4EDA29CD4EA900CA6488 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF4ED829CD4EA900CA6488 /* NetworkManager.swift */; };
-		A0CF4EE229CD592500CA6488 /* AirportViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF4EE129CD592500CA6488 /* AirportViewTest.swift */; };
+		A0CB4DCB29D03C9400634235 /* MockHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB4DCA29D03C9400634235 /* MockHttpClient.swift */; };
+		A0CB4DCD29D03F2000634235 /* AirportResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A0CB4DCC29D03F2000634235 /* AirportResponse.json */; };
+		A0CB4DCF29D040C500634235 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB4DCE29D040C500634235 /* Mockable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A02C91AD29D04A7F0060605B /* AirportListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewModelTests.swift; sourceTree = "<group>"; };
 		A0531CAC29C449CE00B39EB9 /* ACNTechTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNTechTaskApp.swift; sourceTree = "<group>"; };
 		A0531CAD29C449CE00B39EB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0531CAE29C449D000B39EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,9 +92,10 @@
 		A0531D0329C474E700B39EB9 /* AirportDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsView.swift; sourceTree = "<group>"; };
 		A0CB4DC629D0310400634235 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A0CB4DC829D0313100634235 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
-		A0CF4ED829CD4EA900CA6488 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A0CB4DCA29D03C9400634235 /* MockHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpClient.swift; sourceTree = "<group>"; };
+		A0CB4DCC29D03F2000634235 /* AirportResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AirportResponse.json; sourceTree = "<group>"; };
+		A0CB4DCE29D040C500634235 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		A0CF4EDF29CD592500CA6488 /* AirportViewTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportViewTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0CF4EE129CD592500CA6488 /* AirportViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +157,6 @@
 				A0531CE829C449EA00B39EB9 /* Model */,
 				A0CB4DC529D030DD00634235 /* Utilities */,
 				A0531CAE29C449D000B39EB9 /* Assets.xcassets */,
-				A0CF4ED829CD4EA900CA6488 /* NetworkManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -241,7 +243,10 @@
 		A0CF4EE029CD592500CA6488 /* AirportViewTest */ = {
 			isa = PBXGroup;
 			children = (
-				A0CF4EE129CD592500CA6488 /* AirportViewTest.swift */,
+				A0CB4DCA29D03C9400634235 /* MockHttpClient.swift */,
+				A0CB4DCC29D03F2000634235 /* AirportResponse.json */,
+				A0CB4DCE29D040C500634235 /* Mockable.swift */,
+				A02C91AD29D04A7F0060605B /* AirportListViewModelTests.swift */,
 			);
 			path = AirportViewTest;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CB4DCD29D03F2000634235 /* AirportResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CF4ED929CD4EA900CA6488 /* NetworkManager.swift in Sources */,
 				A0531CD629C449D000B39EB9 /* ContentView.swift in Sources */,
 				A0531CFE29C44F6800B39EB9 /* Country.swift in Sources */,
 				A0531CD429C449D000B39EB9 /* ACNTechTaskApp.swift in Sources */,
@@ -455,7 +460,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CF4EDA29CD4EA900CA6488 /* NetworkManager.swift in Sources */,
 				A0531CD729C449D000B39EB9 /* ContentView.swift in Sources */,
 				A0531CFF29C44F6800B39EB9 /* Country.swift in Sources */,
 				A0531CD529C449D000B39EB9 /* ACNTechTaskApp.swift in Sources */,
@@ -492,7 +496,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CF4EE229CD592500CA6488 /* AirportViewTest.swift in Sources */,
+				A0CB4DCB29D03C9400634235 /* MockHttpClient.swift in Sources */,
+				A0CB4DCF29D040C500634235 /* Mockable.swift in Sources */,
+				A02C91AE29D04A7F0060605B /* AirportListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
