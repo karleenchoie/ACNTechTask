@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AirportView: View{
-    @StateObject var list = AirportViewModel()
+    @StateObject var list = NetworkManager()
     
     var body: some View{
       NavigationView {
